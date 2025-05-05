@@ -3,7 +3,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
-model = load_model("C:/Users/shapn/OneDrive/Desktop/Banana final python/src/leaf_diseases_prediction/banana_disease_CNN_MODEL.h5")
+model = load_model("leaf_diseases_prediction/banana_disease_CNN_MODEL.h5")
 
 class_mapping = {
     0: "Banana Black Sigatoka Disease",

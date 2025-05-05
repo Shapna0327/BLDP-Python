@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 confidence_threshold     = 0.2
 detected_above_threshold = False
-model                    = YOLO("C:/Users/shapn/OneDrive/Desktop/Banana final python/src/train/leaf_classification_train/weights/best.pt")
+model                    = YOLO("train/leaf_classification_train/weights/best.pt")
 class_names              = ['banana_leaf', 'leaf']
 
 def detect_leaf_or_not(image):
