@@ -1,8 +1,6 @@
 import os
-
 from leaf_classification.main import detect_leaf_or_not
 from leaf_diseases_prediction.main import detect_leaf_diseases
-
 from flask_cors import CORS
 from flask import Flask, request, jsonify
 
@@ -36,4 +34,5 @@ def predict():
         return jsonify({"result":result}), 200
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5006)
+    port = int(os.environ.get("PORT", 5000))  # Dynamically use the port from environment variable
+    app.run(debug=False, host="0.0.0.0", port=port)  # Listen on all interfaces
