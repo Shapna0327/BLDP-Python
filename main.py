@@ -34,5 +34,5 @@ def predict():
         return jsonify({"result":result}), 200
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Dynamically use the port from environment variable
-    app.run(debug=False, host="0.0.0.0", port=port)  # Listen on all interfaces
+    port = int(os.environ.get("PORT", 5000))  
+    app.run(debug=False, host="0.0.0.0", port=port)  
